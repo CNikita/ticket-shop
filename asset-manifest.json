@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ticket-shop/static/css/main.a3bd2e89.css",
+    "main.js": "/ticket-shop/static/js/main.d370cfda.js",
+    "static/media/login.svg": "/ticket-shop/static/media/login.2b011e464126e368f3a292d031a74db1.svg",
+    "index.html": "/ticket-shop/index.html",
+    "static/media/menu.svg": "/ticket-shop/static/media/menu.9a05156995a4faff4d96818deeed3430.svg",
+    "main.a3bd2e89.css.map": "/ticket-shop/static/css/main.a3bd2e89.css.map",
+    "main.d370cfda.js.map": "/ticket-shop/static/js/main.d370cfda.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3bd2e89.css",
+    "static/js/main.d370cfda.js"
+  ]
+}
