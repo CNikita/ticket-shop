@@ -1,0 +1,98 @@
+@mixin hover {
+  transition: 0.5s;
+  @media (hover: hover) {
+    &:hover {
+      background-color: #ffffff;
+      cursor: pointer;
+      border-radius: 5px;
+      color: #2d3052;
+      fill: #2d3052;
+      stroke: #2d3052;
+      a {
+        color: #2d3052;
+      }
+      .icon-login {
+        fill: #2d3052;
+        stroke: #2d3052;
+      }
+    }
+  }
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  color: #ffffff;
+  padding: 30px 50px 0;
+  box-sizing: border-box;
+  z-index: 4;
+  font-size: calc((1vw + 1vh) * 1);
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .ticket {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    @include hover;
+    a {
+      transition: 0.5s;
+    }
+  }
+  .nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    a {
+      width: 33%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      padding: 0 10px;
+      @include hover;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .menu {
+    display: flex;
+    &__login {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      @include hover;
+      a {
+        transition: 0.5s;
+      }
+      .icon-login {
+        fill: #ffffff;
+        stroke: #ffffff;
+        width: 32px;
+        height: 32px;
+        margin-right: 5px;
+        transition: 0.5s;
+      }
+    }
+    &__burger {
+      width: 32px;
+      height: 32px;
+      margin-left: 40px;
+      fill: #ffffff;
+      stroke: #ffffff;
+      @include hover;
+      @media (max-width: 575px) {
+        margin-left: 10px;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    padding: 20px 30px 0;
+  }
+}

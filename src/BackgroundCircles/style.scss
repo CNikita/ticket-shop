@@ -1,0 +1,32 @@
+.background-circles {
+  overflow: hidden;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    position: absolute;
+    border: 1px solid #8b8cb8;
+    border-radius: 50%;
+  }
+  .big {
+    height: 100vh;
+    width: 100vh;
+  }
+  .small {
+    height: 60vh;
+    width: 60vh;
+  }
+  @media (max-width: 575px) {
+    .big {
+      height: 140vw;
+      width: 140vw;
+    }
+    .small {
+      height: 80vw;
+      width: 80vw;
+    }
+  }
+}

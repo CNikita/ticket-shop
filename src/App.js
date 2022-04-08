@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import Slider from './Slider';
+import Header from './Header';
+import RivalsComponent from "./RivalsComponent";
+import BackgroundCircles from './BackgroundCircles';
+import './App.scss';
 
 function App() {
+  const [activeEvent, setActiveEvent] = useState(2);
+  const [events, setEvents] = useState();
+  useEffect(() => {
+    fetch(`https://cnikita.github.io/data/events.json`)
+      .then(response => response.json())
+      .then(data => setEvents(data))
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      {events ? <Slider events={events} setActiveEvent={setActiveEvent} /> : "Loader"}
+      {events ? <RivalsComponent activeEvent={events[activeEvent]} /> : ""}
+      <BackgroundCircles />
+    </>
   );
 }
 
